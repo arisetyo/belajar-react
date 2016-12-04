@@ -1,0 +1,28 @@
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Element */
+body {
+	background-color: #cecece;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	padding: 5px;
+	color: navy;
+}
+
+/* Classes */
+.content {
+	margin: 10px
+}
+
+.dashedBox {
+	box-sizing: border-box;
+	border: 1px dotted black;
+	margin-bottom: 5px;
+	padding: 10px;
+}

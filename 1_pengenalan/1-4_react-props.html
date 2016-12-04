@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>1 - Pengenalan - Komponen React Sederhana bag.3</title>
+	<link rel="stylesheet" type="text/css" href="../assets/generic.css">
+</head>
+<body>
+
+	<div class="content">
+		<p>Pengenalan <em>properties</em> pada komponen React.</p>
+	</div>
+	
+	<div class="content" id="app"></div>
+
+	<script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+	<script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+	<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+	<script type="text/babel">
+
+		/*
+		Mengenal "properties" pada komponen React untuk komunikasi antar komponen yang berbeda.
+		*/
+
+		//Komponen untuk menampilkan warna
+		let ColorDisplay = React.createClass({
+			render: function() {
+				var displayStyle = {backgroundColor: '#'+this.props.bgcol};
+				return (
+					<h1 style={displayStyle}>Ganti warna latar!</h1>
+				);
+			}
+		});
+		
+		//Komponen tombol dengan warna-warna preset
+		let PresetButton = React.createClass({
+			handleClick: function(event) {
+				this.props.onColorSelected(this.props.preset);
+			},
+			render: function() {
+				var displayStyle = {backgroundColor: '#'+this.props.preset};
+				return (
+					<button onClick={this.handleClick}><i style={displayStyle}>&nbsp;&nbsp;&nbsp;</i> {this.props.preset}</button>
+				);
+			}
+		});
+
+		//Komponen untuk memasukkan nilai hexadesimal warna
+		let TextInput = React.createClass({
+			handleTextInput: function(event) {
+				this.props.onColorSelected(event.target.value);
+			},
+			render: function() {
+				return (
+					<input type="text" onChange={this.handleTextInput} value={this.props.currentColor}/>
+				);
+			}
+		});
+
+		//Komponen utama yang menggunakan dua komponen di atas
+		let App = React.createClass({
+			getInitialState: function() {
+				return {color: 'ccc'};
+			},
+			handleColorSelection: function(selectedColor) {
+				this.setState({color: selectedColor});
+			},
+			render: function() {
+				return (
+					<div>
+						<ColorDisplay bgcol={this.state.color}/>
+						<PresetButton preset="c00" onColorSelected={this.handleColorSelection}/>
+						<PresetButton preset="0c0" onColorSelected={this.handleColorSelection}/>
+						<PresetButton preset="00c" onColorSelected={this.handleColorSelection}/>
+						<TextInput onColorSelected={this.handleColorSelection} currentColor={this.state.color}/>
+					</div>
+				);
+			}
+		});
+
+
+		//Kita cukup me-render komponen utama
+		ReactDOM.render(
+			<App/>,
+			document.getElementById('app')
+		);
+	</script>
+</body>
+</html>

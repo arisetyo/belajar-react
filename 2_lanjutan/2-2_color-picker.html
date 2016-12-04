@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>2 - Lanjutan - Color Picker</title>
+	<link rel="stylesheet" type="text/css" href="../assets/generic.css">
+	<link rel="stylesheet" type="text/css" href="../assets/example_color-picker.css">
+</head>
+<body>
+
+	<div class="content">
+		<p>Membuat komponen input <em>color picker</em> sederhana.</p>
+	</div>
+	
+	<div class="content" id="app"></div>
+
+	<script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+	<script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+	<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+	<script type="text/babel">
+
+		let intensityArr = Array.apply(null, Array(257)).map(function(_, i) {return i}).filter(function(i){ return i % 32 === 0 && i !== 0 });
+
+		//Komponen utama. Berisi set komponen pilihan warna.
+		let ColorPicker = React.createClass({
+			getInitialState: function() {
+				return {blue_index: 0, sampled: [31, 31, 31]};
+			},
+			handleShiftLeft: function(){
+				if(this.state.blue_index > 0) this.setState({blue_index: this.state.blue_index - 1});
+				else return;
+			},
+			handleShiftRight: function(){
+				if(this.state.blue_index < intensityArr.length - 1) this.setState({blue_index: this.state.blue_index + 1});
+				else return;
+			},
+			handleSelection: function(val){
+				this.setState({sampled: val});
+			},
+			render: function(){
+				var boxes = [],
+						blue_hue = intensityArr[this.state.blue_index] - 1;
+
+				for (var r=0; r<intensityArr.length; r++) {
+					for (var g=0; g<intensityArr.length; g++) {
+						var rgb_arr = [];
+						rgb_arr.push(intensityArr[r] - 1);
+						rgb_arr.push(intensityArr[g] - 1);
+						rgb_arr.push(blue_hue);
+						boxes.push(<ColorBox key={r + ',' + g + ',' + blue_hue} rgb={rgb_arr} rgbArraySelected={this.handleSelection}/>);
+					}
+				}
+
+				return (
+					<div>
+						<ColorControls hue={this.state.blue_index} shiftLeft={this.handleShiftLeft} shiftRight={this.handleShiftRight}/>
+						<ul>{boxes}</ul>
+						<ColorSampling sample={this.state.sampled}/>
+					</div>
+				);
+			}
+		});
+
+		//Komponen pilihan warna yang dapat diklik dan memberikan informasi warna
+		let ColorBox = React.createClass({
+			handleClick: function(){
+				this.props.rgbArraySelected(this.props.rgb);
+			},
+			render: function(){
+				var rgbArr = this.props.rgb,
+						rbgStr = 'rgb(' + rgbArr.join() + ')';
+				var boxStyle = {backgroundColor: rbgStr};
+				return <li style={boxStyle} className="boxstyle" onClick={this.handleClick}><a href="#"></a></li>;
+			}
+		});
+
+		//Komponen yang mengatur set warna
+		let ColorControls = React.createClass({
+			handlePrev: function(){
+				this.props.shiftLeft();
+			},
+			handleNext: function(){
+				this.props.shiftRight();
+			},
+			render: function(){
+				var controlStyle = {paddingBottom: 10};
+				return (
+					<div style={controlStyle}>
+						<button onClick={this.handlePrev}>&lt;</button>
+						<button onClick={this.handleNext}>&gt;</button>
+						<small><em>Blue hue: <strong>{intensityArr[this.props.hue] - 1}</strong></em></small>
+					</div>
+				);
+			}
+		});
+
+		//Komponen yang menampilkan warna terpilih
+		let ColorSampling = React.createClass({
+			render: function(){
+				var rgbArr = this.props.sample,
+						rbgStr = 'rgb(' + rgbArr.join() + ')';
+				var sampleStyle = {backgroundColor: rbgStr};
+
+				return (
+					<div className="sampleContainerStyle">
+						<div style={sampleStyle} className="sampleBoxStyle">&nbsp;</div>
+						<div>
+							<span>R: <strong>{rgbArr[0]}</strong></span><br/>
+							<span>G: <strong>{rgbArr[1]}</strong></span><br/>
+							<span>B: <strong>{rgbArr[2]}</strong></span>
+						</div>
+					</div>
+				);
+			}
+		});
+		
+		ReactDOM.render( <ColorPicker/>, document.getElementById('app') );
+
+		/**
+		 * Ide untuk pengembangan selanjutnya:
+		 * - menggunakan slider untuk memilih hue
+		 * - menampilkan data warna dalam format hexadesimal
+		 * - menambah kombinasi nilai rgb
+		 * - meningkatkan performa
+		 * - dsb.
+		 */
+	</script>
+</body>
+</html>

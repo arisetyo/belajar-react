@@ -4,18 +4,22 @@
 	* Apa itu React
 	* Konsep _“Atomic Design Methodology”_
 	* Membuat komponen React pertama
+		* _Timer_
 		* Tombol _counter_
 		* _Text input_
-	* Pengenalan _lifecycle_ komponen React
+		* Olah data
+	* Pengenalan _lifecycle_ komponen React (teori)
 	* Komponen React lanjutan
 		* _Dropdown menu_
 		* _Color picker_
-		* _Wrapper_ untuk sebuah bagan D3.js
+		* _Wrapper_ untuk sebuah SVG menggunakan Raphael
 
 ## Pengenalan NPM
 	* Apa itu NPM
 	* Instalasi Node
 	* Contoh penggunaan package.json
+	* npm install [--save | -g]
+	* npm start
 
 ## Pengenalan ES6
 	* Apa itu ES6
@@ -49,7 +53,7 @@
 		* _To-do List_ sederhana
 	* Membuat komponen React + Redux lanjutan
 		* _To-do List_ lanjutan
-		* _Wrapper_ D3.js dengan Redux
+		* _Wrapper_ Raphael dengan Redux
 
 ## Styling
 	* Penggunaan CSS inline
@@ -58,7 +62,10 @@
 		* Keuntungannya
 		* Contoh: memberi _modular style_ untuk komponen-komponen React
 	* Animasi untuk React
-
+	* Animasi CSS
+		* Animasi sederhana
+		* Animasi lanjutan
+		* Animasi komponen SVG (Raphael)
 
 ## React lanjutan
 	* React _server side_

@@ -1,0 +1,26 @@
+.combobox {
+	box-sizing: border-box;
+	position: absolute;
+	min-width: 120px;
+}
+
+ul {
+	max-width: 120px;
+	background-color: #eee;
+	margin: 1px;
+	height: 100px;
+	overflow-y: scroll;
+}
+
+li {
+	list-style: none;
+	border-bottom: 1px dotted black;
+	font-size: 12px;
+	height: 1.8em;
+	line-height: 1.8em;
+	cursor: pointer;
+}
+
+.closed {
+	visibility: hidden;
+}

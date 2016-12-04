@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>1 - Pengenalan - Komponen React Sederhana bag.1</title>
+	<link rel="stylesheet" type="text/css" href="../assets/generic.css">
+</head>
+<body>
+
+	<div class="content">
+		<p>Komponen React sederhana.</p>
+	</div>
+
+	<div class="content" id="app"></div>
+
+	<script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+	<script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+	<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+	<script type="text/babel">
+
+		/*
+		Di sini kita mempelajari konsep "state" pada komponen React
+		*/
+
+		let Counter = React.createClass({
+			getInitialState: function() {
+				return {count: 0};
+			},
+
+			handleClick: function() {
+				this.setState({count: this.state.count + 1});
+			},
+			
+			render: function() {
+				return (
+					<div>
+						<button onClick={this.handleClick}>+ 1</button>
+						<h1>{this.state.count}</h1>
+					</div>
+				);
+			}
+		});
+		
+		ReactDOM.render(
+			<Counter/>,
+			document.getElementById('app')
+		);
+	</script>
+</body>
+</html>

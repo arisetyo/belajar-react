@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>2 - Lanjutan - SVG Control</title>
+	<link rel="stylesheet" type="text/css" href="../assets/generic.css">
+	<link rel="stylesheet" type="text/css" href="../assets/example_svg-control.css">
+</head>
+<body>
+
+	<div class="content">
+		<p>Membuat komponen pengendali komponen SVG.</p>
+	</div>
+	
+	<div class="content" id="app"></div>
+	<div id="svgCanvas"></div>
+
+	<script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+	<script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+	<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+	<!-- Kita menggunakan library Raphael untuk pembuatan komponen SVG -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.js"></script>
+
+	<script type="text/babel">
+
+		//Komponen tombol dengan warna-warna preset
+		let PresetButton = React.createClass({
+			handleClick: function(event) {
+				this.props.onColorSelected(this.props.preset);
+			},
+			render: function() {
+				var displayStyle = {backgroundColor: this.props.preset};
+				return (
+					<button onClick={this.handleClick}><i style={displayStyle}>&nbsp;&nbsp;&nbsp;</i> {this.props.preset}</button>
+				);
+			}
+		});
+
+		let SVGContainer = React.createClass({
+			getInitialState: function() {
+				this.paper = Raphael('svgCanvas', 400, 400);
+				return null;
+			},
+			componentDidMount: function() {
+				this.rect = this.paper.rect(100, 100, 200, 200);
+				this.rect.attr('fill', '#fff');
+				this.rect.attr('stroke', '#fff');
+			},
+			handleColorSelection: function(selectedColor) {
+				this.rect.attr('fill', selectedColor);
+				this.rect.attr('stroke', selectedColor);
+			},
+			render: function() {
+				return (
+					<div>
+						<PresetButton preset="#c00" onColorSelected={this.handleColorSelection}/>
+						<PresetButton preset="#0c0" onColorSelected={this.handleColorSelection}/>
+						<PresetButton preset="#00c" onColorSelected={this.handleColorSelection}/>
+					</div>
+				)
+			}
+		});
+
+		ReactDOM.render( <SVGContainer/>, document.getElementById('app') );
+
+		/**
+		 * Ide untuk pengembangan selanjutnya:
+		 * - mengatur ukuran
+		 * - mengatur animasi
+		 * - mengatur kecepatan gerak
+		 * - mengatur radius
+		 * - dsb.
+		 */
+	</script>
+</body>
+</html>

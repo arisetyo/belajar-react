@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>2 - Lanjutan - Dropdown</title>
+	<link rel="stylesheet" type="text/css" href="../assets/generic.css">
+	<link rel="stylesheet" type="text/css" href="../assets/example_dropdown.css">
+</head>
+<body>
+
+	<div class="content">
+		<p>Membuat komponen input dropdown. Melanjutkan dari konsep di Pengenalan dan ditambah pengaturan tampilan dengan CSS</p>
+	</div>
+	
+	<div class="content" id="app"></div>
+
+	<div class="content">
+		<small>Silakan memilih nama buah menggunakan komponen di atas.</small>
+	</div>
+
+	<script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+	<script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+	<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+	<script type="text/babel">
+
+		let DropList = React.createClass({
+			handleClick: function(arrIndex) {
+				this.props.onSelect(arrIndex);
+			},
+			render: function(){
+				const data = this.props.data;
+				let items = data.map(function(item, index){
+					return (
+						<li key={index} onClick={this.handleClick.bind(null, index)}>{item.label}</li>
+					)
+				}.bind(this));
+				return (
+					<div className={'combobox ' + `${this.props.visibility ? '' : 'closed'}`}>
+						<ul>{items}</ul>	
+					</div>
+				);
+			}
+		});
+
+		let TextInput = React.createClass({
+			render: function() {
+				return <input onClick={this.props.onInputClick} type="text" value={this.props.selectedItem}/>
+			}
+		});
+
+		let MyComboBox = React.createClass({
+			getInitialState: function() {
+				return {item: '', isComboboxShown: false, listData: [{id:101, label:'Mangga'}, {id:102, label:'Pisang'}, {id:103, label:'Jambu'}, {id:104, label:'Duku'}, {id:105, label:'Salak'}, {id:106, label:'Durian'}, {id:107, label:'Rambutan'}, {id:108, label:'Sawo'}]};
+			},
+			handleSelection: function(arrIndex) {
+				this.setState({item: this.state.listData[arrIndex].label, isComboboxShown: false});
+			},
+			handleInputClick: function() {
+				this.setState({isComboboxShown: true});
+			},
+			render: function() {
+				return (
+					<div>
+						<TextInput selectedItem={this.state.item} onInputClick={this.handleInputClick}/>
+						<DropList data={this.state.listData} onSelect={this.handleSelection} visibility={this.state.isComboboxShown}/>
+					</div>
+				);
+			}
+		});
+
+		ReactDOM.render(
+			<MyComboBox/>,
+			document.getElementById('app')
+		);
+
+		/**
+		 * Ide untuk pengembangan selanjutnya:
+		 * - gunakan kata kunci untuk mem-filter pilihan di DropList
+		 * - gunakan event onBlur untuk menutup DropList
+		 * - membuat tampilan item yang lebih komprehensif (contoh: menampilkan label dan id) di DropList
+		 * - menambahkan ikon suryakanta di TextInput
+		 * - menggunakan listData dinamis
+		 * - dsb.
+		 */
+	</script>
+</body>
+</html>
