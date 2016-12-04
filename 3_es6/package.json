@@ -1,0 +1,34 @@
+{
+  "name": "mengenal-webpack-es6",
+  "version": "1.0.0",
+  "description": "belajar es6 dan webpack",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && open index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/arisetyo/belajar-react"
+  },
+  "keywords": [
+    "react",
+    "es6",
+    "webpack",
+    "babel"
+  ],
+  "author": "Arie M. Prasetyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arisetyo/belajar-react/issues"
+  },
+  "homepage": "https://github.com/arisetyo/belajar-react"
+}

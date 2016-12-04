@@ -26,3 +26,10 @@ h1 {
 	margin-bottom: 5px;
 	padding: 10px;
 }
+
+.code {
+	background-color: #fff;
+	border-radius: 2px;
+	font-family: "Courier New", monospace;
+	padding: 0 5px;
+}

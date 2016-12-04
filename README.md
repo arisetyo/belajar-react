@@ -34,6 +34,7 @@
 	* _Promises_
 	* _Classes_ dan _modules_
 * Penggunaan Babel dan Webpack
+	* Instalasi webpack global
 	* Mengenal Babel & Webpack
 	* Mengenal webpack.config.js
 	* Membuat komponen React menggunakan ES6
