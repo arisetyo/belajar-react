@@ -69,6 +69,7 @@
 	* Animasi komponen SVG (Raphael)
 
 ## React lanjutan
+* Class vs fungsi
 * React _server side_
 	* Tujuan
 	* Contoh aplikasi

@@ -15,6 +15,11 @@ h1 {
 	color: navy;
 }
 
+h3 {
+	padding: 5px;
+	color: fuchsia;
+}
+
 /* Classes */
 .content {
 	margin: 10px
