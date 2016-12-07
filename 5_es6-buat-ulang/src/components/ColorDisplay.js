@@ -13,7 +13,7 @@ class ColorDisplay extends Component {
 	}
 	render() {
 		return (
-			<div className='dashedBox'>
+			<div>
 				<Display bgcol={this.state.color}/>
 				<PresetButton preset="c00" onColorSelected={this.handleColorSelection}/>
 				<PresetButton preset="0c0" onColorSelected={this.handleColorSelection}/>

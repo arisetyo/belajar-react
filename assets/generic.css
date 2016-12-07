@@ -32,9 +32,40 @@ h3 {
 	padding: 10px;
 }
 
+.topBorder {
+	box-sizing: border-box;
+	border-top: 1px solid #333;
+	margin-bottom: 5px;
+	padding: 10px;
+}
+
 .code {
 	background-color: #fff;
 	border-radius: 2px;
 	font-family: "Courier New", monospace;
 	padding: 0 5px;
+}
+
+/* Layout */
+.componentContainer {
+	position: static;
+	height: 250px;
+}
+
+.component {
+	border: 1px dotted #bbb;
+	width: 300px;
+	height: 220px;
+	padding: 10px;
+	margin: 5px;
+	display: inline-block;
+	overflow: scroll;
+}
+
+.largeComponent {
+	border: 1px dotted #bbb;
+	width: 632px;
+	height: 400px;
+	padding: 10px;
+	margin: 5px;
 }

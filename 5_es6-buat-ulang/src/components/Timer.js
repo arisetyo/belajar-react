@@ -29,7 +29,7 @@ class Timer extends Component {
 
 	render() {
 		return (
-			<div className='dashedBox'>
+			<div>
 				<p>Detik terlewati: {this.state.secElapsed}</p>
 				<button onClick={this.pause.bind(this)}>Pause</button>
 			</div>

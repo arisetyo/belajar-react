@@ -12,7 +12,7 @@ class Counter extends Component {
 
 	render() {
 		return (
-			<div className='dashedBox'>
+			<div>
 				<button onClick={this.handleClick.bind(this)}>+ 1</button>
 				<h1>{this.state.count}</h1>
 			</div>
