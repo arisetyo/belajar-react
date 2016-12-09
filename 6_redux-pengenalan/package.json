@@ -1,0 +1,19 @@
+{
+  "name": "redux-1",
+  "version": "1.0.0",
+  "description": "non-react redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && open index.html"
+  },
+  "author": "Arie M. Prasetyo",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "redux": "^3.6.0",
+    "webpack": "^1.14.0"
+  }
+}
