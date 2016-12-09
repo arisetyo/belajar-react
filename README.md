@@ -37,6 +37,7 @@
 	* Instalasi webpack global
 	* Mengenal Babel & Webpack
 	* Mengenal webpack.config.js
+	* hot module reload & webpack-dev-server
 	* Membuat komponen React menggunakan ES6
 	* Menerjemahkan komponen dari latihan sebelumnya ke ES6
 
@@ -74,6 +75,7 @@
 	* Tujuan
 	* Contoh aplikasi
 * Optimasi menggunakan Webpack
+* ESLint
 * Penggunaan middleware
 	* Redux-Thunk
 	* React-Redux-Router

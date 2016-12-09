@@ -1,10 +1,15 @@
 var webpack = require('webpack');
 
 module.exports = {
-	entry: './src',
+	entry: [
+		"./src/index.js",
+		'webpack-dev-server/client?http://0.0.0.0:3300',
+		'webpack/hot/only-dev-server'
+	],
 	output: {
-		path: 'build',
+		path: __dirname + '/build',
 		filename: 'bundle.js',
+		publicPath: '/build'
 	},
 	module: {
 		loaders: [

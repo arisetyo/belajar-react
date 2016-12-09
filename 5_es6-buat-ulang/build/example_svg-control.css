@@ -1,0 +1,7 @@
+#svgCanvas {
+	box-sizing: border-box;
+	border: 1px dotted #bbb;
+	margin: 10px;
+	width: 400px;
+	height: 400px;
+}

@@ -46,20 +46,6 @@ h3 {
 	padding: 0 5px;
 }
 
-.todos {
-	font-size: 14px;
-	font-weight: bold;
-}
-
-.todos > span {
-	cursor: pointer;
-	cursor: hand;
-}
-
-.todos > span.striked {
-	text-decoration: line-through;
-}
-
 /* Layout */
 .componentContainer {
 	position: static;

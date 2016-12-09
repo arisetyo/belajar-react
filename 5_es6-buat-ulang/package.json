@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && open index.html"
+    "start": "webpack-dev-server --inline --hot --host 0.0.0.0 --port 3300"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/arisetyo/belajar-react",
   "devDependencies": {
-    "webpack": "^1.13.3"
+    "babel-preset-react-hmre": "^1.1.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "babel-core": "^6.18.2",
@@ -31,6 +33,7 @@
     "babel-preset-react": "^6.16.0",
     "jquery": "^3.1.1",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "webpack-raphael": "^2.1.4"
   }
 }

@@ -7,6 +7,7 @@ import ColorDisplay from './components/ColorDisplay'
 import Tabular from './components/Tabular'
 import Dropdown from './components/Dropdown'
 import ColorPicker from './components/ColorPicker'
+import SVGContainer from './components/SVGContainer'
 
 class App extends Component {
 	render () {
@@ -44,6 +45,9 @@ class App extends Component {
 					<h3>ColorPicker</h3>
 					<ColorPicker/>
 				</div>
+
+				<h3>SVG Control</h3>
+				<SVGContainer/>
 					
 			</div>
 		)
