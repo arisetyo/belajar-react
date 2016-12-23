@@ -1,0 +1,66 @@
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Element */
+body {
+	background-color: #cecece;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	padding: 5px;
+	color: darkred;
+}
+
+h2 {
+	padding: 5px 5px 15px 5px;
+	color: navy;
+}
+
+h3 {
+	padding: 5px;
+	color: grey;
+}
+
+/* Classes */
+div {
+	margin: 10px;
+}
+
+li {
+	margin-left: 30px;
+	line-height: 1.8em;
+}
+
+header {
+	margin-bottom: 10px;
+}
+footer {
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+	color: grey;
+	font-weight: bold;
+	border-bottom: 1px dashed grey;
+	margin: 0 5px;
+}
+
+a:hover {
+	color: darkred;
+	border-bottom-color: darkred;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
+p {
+	padding: 10px;
+}
