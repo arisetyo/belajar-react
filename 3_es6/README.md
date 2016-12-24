@@ -8,54 +8,54 @@ Konstruktor _let_ dan _const_ lebih disarankan daripada penggunaan _var_ karena 
 ## _Template Literal_
 Perhatikan contoh berikut:
 __ES5__
-```
+```javascript
 var greet = 'Namaku ' + firstname + ' ' + lastname ', tinggal di ' + address + '.'
 var url = 'http://localhost:3000/api/messages/' + id
 ```
 __ES6__
-```
+```javascript
 let greet = `Namaku ${name} ${lastname}, tinggal di ${address}.`
 const url = `http://localhost:3000/api/messages/${id}`
 ```
 
 Tik `` juga dapat digunakan untuk membuat string yang lebih dari satu baris.
 
-## _Arrow function_/"_Fat arrow_"
+## _Arrow function_ / "_Fat arrow_"
 _Arrow function_ membuat penulisan kode menjadi lebih singkat dan jelas. Perhatikan contoh berikut:
 __ES5__
-```
+```javascript
 ajax.response(function(data) {
-	_//dosomething_
+	//dosomething
 })
 
 let testMe = function(name, age) {
-	_//dosomething_
+	//dosomething
 }
 
 something.onClick(function() {
-	_//dosomething_
+	//dosomething
 })
 
 let messages = ids.map(function(value) {
-	return "ID is " + value _//return eksplisit_
+	return "ID is " + value //return eksplisit
 });
 ```
 __ES6__
 ```javascript
 
 ajax.response(data => {
-	_//dosomething_
+	//dosomething
 })
 
 let testMe = (name, age) => {
-	_//dosomething_
+	//dosomething
 }
 
 something.onClick(() => {
-	_//dosomething_
+	//dosomething
 })
 
-let messages = ids.map(value => `ID is ${value}`) _//return implicit_
+let messages = ids.map(value => `ID is ${value}`) //return implisit
 ```
 
 # _Destructuring Assignment_
@@ -127,7 +127,7 @@ console.log(sum(1, 2, 3, 4, 5)); // 15
 
 let source = [1,2,3]
 let newArr_A = source //<-berpotensi memutasi array sumber
-let newArr_B = [...source] //<-tidak akan memutasi array sumber
+let newArr_B = [...source] //<-operasi pada newArr_B tidak akan memutasi array sumber
 ```
 
 # Struktur data Map dan Set
@@ -174,7 +174,8 @@ export function getAccounts(url) {
 	//dosomething
 }
 
----
+# # #
+
 //file lain yang menggunakan module dari module.js
 import {port, getAccounts} from './module'
 console.log(port) // 3000
