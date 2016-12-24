@@ -15,7 +15,7 @@ var url = 'http://localhost:3000/api/messages/' + id
 ```
 __ES6__
 ```javascript
-let greet = `Namaku ${name} ${lastname}, tinggal di ${address}.`
+let greet = `Namaku ${firstname} ${lastname}, tinggal di ${address}.`
 const url = `http://localhost:3000/api/messages/${id}`
 ```
 
@@ -30,7 +30,11 @@ ajax.response(function(data) {
 	//dosomething
 })
 
-let testMe = function(name, age) {
+var testMe = function(name, age) {
+	//dosomething
+}
+
+var testIt = function() {
 	//dosomething
 }
 
@@ -53,6 +57,10 @@ let testMe = (name, age) => {
 	//dosomething
 }
 
+const testIt = () => {
+	//dosomething
+}
+
 something.onClick(() => {
 	//dosomething
 })
@@ -66,7 +74,7 @@ Perhatikan contoh berikut:
 
 ```javascript
 //module.js
-export var port = 3000
+export const port = 3000
 export function getAccounts(url) {
 	//dosomething
 }
