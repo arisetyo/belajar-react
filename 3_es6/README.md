@@ -7,6 +7,7 @@ Konstruktor _let_ dan _const_ lebih disarankan daripada penggunaan _var_ karena 
 
 ## _Template Literal_
 Perhatikan contoh berikut:
+
 __ES5__
 ```javascript
 var greet = 'Namaku ' + firstname + ' ' + lastname ', tinggal di ' + address + '.'
@@ -22,6 +23,7 @@ Tik `` juga dapat digunakan untuk membuat string yang lebih dari satu baris.
 
 ## _Arrow function_ / "_Fat arrow_"
 _Arrow function_ membuat penulisan kode menjadi lebih singkat dan jelas. Perhatikan contoh berikut:
+
 __ES5__
 ```javascript
 ajax.response(function(data) {
@@ -56,6 +58,24 @@ something.onClick(() => {
 })
 
 let messages = ids.map(value => `ID is ${value}`) //return implisit
+```
+
+# Module dan Import
+
+Perhatikan contoh berikut:
+
+```javascript
+//module.js
+export var port = 3000
+export function getAccounts(url) {
+	//dosomething
+}
+
+# # #
+
+//file lain yang menggunakan module dari module.js
+import {port, getAccounts} from './module'
+console.log(port) // 3000
 ```
 
 # _Destructuring Assignment_
@@ -110,7 +130,7 @@ Atau kalau gabung dengan penggunaan _arrow function_:
 const getCar = (make, model, value) => ({make, model, value})
 ```
 
-# _Rest/Spread Operator_
+# Operator _Rest/Spread_
 
 Dengan sintaks _rest/spread_ "..." kita dapat membuat fungsi yang lebih fleksibel dalam menerima parameter. Perhatikan contoh berikut:
 
@@ -128,6 +148,18 @@ console.log(sum(1, 2, 3, 4, 5)); // 15
 let source = [1,2,3]
 let newArr_A = source //<-berpotensi memutasi array sumber
 let newArr_B = [...source] //<-operasi pada newArr_B tidak akan memutasi array sumber
+```
+
+# Parameter default
+
+Perhatikan contoh berikut:
+
+```javascript
+const link = (height = 50, color = 'merah') => {
+	console.log(`Tinggi ${height}cm berwarna ${color}`)
+}
+
+link() //<- menghasilkan "Tinggi 50cm berwarna merah"
 ```
 
 # Struktur data Map dan Set
@@ -163,35 +195,6 @@ map.clear()
 map.size //<- menghasilkan 0
 ```
 
-# Module dan Import
-
-Perhatikan contoh berikut:
-
-```javascript
-//module.js
-export var port = 3000
-export function getAccounts(url) {
-	//dosomething
-}
-
-# # #
-
-//file lain yang menggunakan module dari module.js
-import {port, getAccounts} from './module'
-console.log(port) // 3000
-```
-
-# Parameter default
-
-Perhatikan contoh berikut:
-
-```javascript
-const link = (height = 50, color = 'merah') => {
-	console.log(`Tinggi ${height}cm berwarna ${color}`)
-}
-
-link() //<- menghasilkan "Tinggi 50cm berwarna merah"
-```
 ---
 
 Beberapa fitur penting lain yang dapat kita gunakan di ES6 adalah `fetch()` dan `Promise()`. Saya sarankan untuk mencari tahu lebih dalam mengenai dua API di berbagai blog teknis lain karena mereka membutuhkan penjelasan yang cukup komprehensif.
