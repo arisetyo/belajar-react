@@ -140,7 +140,7 @@ const getCar = (make, model, value) => ({make, model, value})
 
 # Operator _Rest/Spread_
 
-Dengan sintaks _rest/spread_ "..." kita dapat membuat fungsi yang lebih fleksibel dalam menerima parameter. Perhatikan contoh berikut:
+Dengan sintaks _rest/spread_ "..." kita dapat membuat fungsi yang lebih fleksibel dalam menerima parameter serta "menyebarkan" isi setiap anggota array ke dalam array baru. Perhatikan contoh berikut:
 
 ```javascript
 function sum(…numbers) {
