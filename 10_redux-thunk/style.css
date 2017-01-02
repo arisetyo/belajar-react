@@ -1,0 +1,11 @@
+/* Reset */
+* {
+	margin: 0;
+	padding: 10px;
+}
+
+/* Element */
+body {
+	background-color: #cecece;
+	font-family: Arial, sans-serif;
+}
