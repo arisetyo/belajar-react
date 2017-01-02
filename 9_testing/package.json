@@ -1,0 +1,35 @@
+{
+  "name": "testing-react-tdd",
+  "version": "1.0.0",
+  "description": "test React TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha .setup.js src/App.tests.js src/utils.tests.js",
+    "start": "webpack-dev-server --progress --inline --hot --host 0.0.0.0 --port 3310"
+  },
+  "keywords": [
+    "react",
+    "TDD"
+  ],
+  "author": "Arie M. Prasetyo",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.0",
+    "jsdom": "^9.9.1",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
