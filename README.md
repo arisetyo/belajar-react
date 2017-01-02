@@ -2,37 +2,39 @@
 
 ## Pengenalan React
 * Apa itu React
+	React adalah sebuah library JavaScript yang dikembangkan dan dikelola oleh Facebook & Instagram untuk menampilkan data & membuat komponen-komponen User Interface.
+	Menurut layanan analitik Libscore, saat ini React digunakan oleh Netflix, Imgur, Bleacher Report, Feedly, Airbnb, SeatGeek, HelloSign, Walmart, dan lain-lain (Wikipedia).
+
 * Konsep _“Atomic Design Methodology”_
-* Membuat komponen React pertama
-	* _Timer_
-	* Tombol _counter_
-	* _Text input_
-	* Olah data
-* Pengenalan _lifecycle_ komponen React (teori)
-* Komponen React lanjutan
-	* _Dropdown menu_
-	* _Color picker_
-	* _Wrapper_ untuk sebuah SVG menggunakan Raphael
+
+	> We're not designing pages, we're designing systems of components. —Stephen Hay
+
+	Dalam konsep ADM, komponen dapat diumpakan sebagai atom. Kita menggabunkan atom-atom menjadi molekul, molekul menjadi organisme, organisme menjadi template, template menjadi halaman-halaman.
+	React sangat cocok diaplikasikan ke dalam konsep pengembangan ADM karena dalam React kita memulai dari mengembangkan komponen-komponen yang kita gabungkan untuk membentuk sebuah halaman.
+	Keterangan lebih lanjut mengenai ADM dapat dibaca di [tautan ini](http://bradfrost.com/blog/post/atomic-web-design/).
 
 ## Pengenalan NPM
-* Apa itu NPM
+
+_Package manager_ adalah software yang digunakan untuk menginstalasi dan mengelola paket-paket software. Hampir setiap bahasa pemrograman dan sistem operasi memiliki _package manager_-nya masing-masing. Beberapa contoh package manager yang terkenal misalnya brew, apt-get, composer, dan bower.
+NPM (Node Package Manager) adalah sebuah package manager yang dibuat menggunakan teknologi [Node](https://nodejs.org/en/). Untuk menggunakannya kita harus menginstal Node terlebih dahulu di sistem.
+__Catatan__: Selain untuk NPM, kita juga akan membutuhkan Node untuk membuat sebuah aplikasi _backend_ berbasis Node di latihan React _server-side_
+
 * Instalasi Node
-* Contoh penggunaan package.json
-* npm install [--save | -g]
-* npm start
+	Silahkan langsung membuka laman Node untuk membaca cara instalasi Node di sistem operasi yang digunakan. Saya sendiri menggunakan brew untuk menginstal Node di MacOS.
+
+* package.json
+	Berkas _package.json_ adalah berkas konfigurasi yang digunakan oleh Node. Dalam latihan ini saya akan banyak menggunakan berkas ini terutama untuk konfigurasi berkas-berkas yang harus diinstalasi menggunakan NPM.
+	Cara penggunaannya mudah, kita tinggal membuka direktori yang berisi berkasi _package.json_ melalui terminal lalu memulai instalasi library yang dibutuhkan dengan perintah `npm isntall`.
+
+* Skrip NPM
+	Selain mencatat library yang digunakan, _package.json_ juga dapat digunakan untuk menuliskan skrip perintah yang dapat kita jalankan di sebuah lingkungan Node.
+	Di banyak latihan, selain perintah `npm install` untuk menginstalasi library, kita juga akan menggunakan skrip `npm start` untuk menjalankan perintah-perintah seperti transpilasi menggunakan webpack atau menjalankan server Node.
+	Di bagian TDD, kita juga dapat mengatur skrip `npm test` untuk menjalankan _test runner_ seperti Mocha untuk menjalankan tes pada berkas-berkas JavaScript aplikasi kita.
 
 ## Pengenalan ES6
-* Apa itu ES6
-* Beberapa fitur baru ES6
-	* _let_ & _const_
-	* _Fat arrow_
-	* _Spread_
-	* _Template literal_
-	* _for…of_
-	* _Map_ dan _Set_
-	* _Destructuring_
-	* _Promises_
-	* _Classes_ dan _modules_
+
+[Pengenalan ES6.](https://github.com/arisetyo/belajar-react/tree/master/3_es6)
+
 * Penggunaan Babel dan Webpack
 	* Instalasi webpack global
 	* Mengenal Babel & Webpack

@@ -1,4 +1,18 @@
-# Beberapa contoh fitur terbaru JavaScript (ES6)
+# Apa Itu ES6 / ES2015
+
+> ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009.
+> Implementation of these features in major JavaScript engines is underway now.
+> (https://github.com/lukehoban/es6features)
+
+ECMAScript adalah spesifikasi yang dibuat sebagai proses standardisasi bahasa skrip yang awalnya dikembangkan oleh Brendan Eich untuk Netscape.
+Versi JavaScript yang resmi didukung oleh semua peramban modern saat ini adalah ECMAScript 5 yang disahkan pada tahun 2011.
+
+Pada tahun 2015 JavaScript mengalami perubahan besar-besaran dengan disahkannya ECMAScript 2015 atau lebih sering dikenal dengan sebutan ES6.
+ES6 dapat dikatakan memiliki banyak fitur yang selama ini diidam-idamkan para programer JavaScript.
+
+Dalam latihan ini kita akan menggunakan banyak fitur terbaru JavaScript yang tercantum di spesifikasi ES6. Oleh sebab itu akan sangat membantu bila fitur-fitur berikut telah dikuasai atau difahami.
+
+# Beberapa contoh fitur terbaru JavaScript di ES6
 
 Selain fitur yang meningkatkan fitur sebelumnya (seperti _for of_) dan fitur standar yang ada di bahasa-bahasa pemrograman lain (seperti _class_), berikut ini adalah beberapa fitur baru di ES6 yang sebaiknya dikuasai untuk membuat aplikasi React menggunakan ES6.
 
@@ -140,7 +154,10 @@ const getCar = (make, model, value) => ({make, model, value})
 
 # Operator _Rest/Spread_
 
-Dengan sintaks _rest/spread_ "..." kita dapat membuat fungsi yang lebih fleksibel dalam menerima parameter serta "menyebarkan" isi setiap anggota array ke dalam array baru. Perhatikan contoh berikut:
+Dengan sintaks _rest/spread_ "..." kita dapat membuat fungsi yang lebih fleksibel dalam menerima parameter. 
+Sintaks ini juga dapat digunakan untuk "menyebarkan" isi setiap anggota array ke dalam array baru.
+
+Perhatikan contoh berikut:
 
 ```javascript
 function sum(…numbers) {
@@ -171,6 +188,8 @@ link() //<- menghasilkan "Tinggi 50cm berwarna merah"
 ```
 
 # Struktur data Map dan Set
+
+_Fitur berikut tidak kita gunakan di latihan tetapi ada baiknya untuk diketahui._
 
 Perhatikan contoh berikut:
 
