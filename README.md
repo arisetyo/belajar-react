@@ -1,47 +1,57 @@
 # Materi Bimbingan Penggunaan React
 
 ## Pengenalan React
-* Apa itu React
-	React adalah sebuah library JavaScript yang dikembangkan dan dikelola oleh Facebook & Instagram untuk menampilkan data & membuat komponen-komponen User Interface.
-	Menurut layanan analitik Libscore, saat ini React digunakan oleh Netflix, Imgur, Bleacher Report, Feedly, Airbnb, SeatGeek, HelloSign, Walmart, dan lain-lain (Wikipedia).
 
-* Konsep _“Atomic Design Methodology”_
+React adalah sebuah library JavaScript yang dikembangkan dan dikelola oleh Facebook & Instagram untuk menampilkan data & membuat komponen-komponen User Interface.
+Menurut layanan analitik Libscore, saat ini React digunakan oleh Netflix, Imgur, Bleacher Report, Feedly, Airbnb, SeatGeek, HelloSign, Walmart, dan lain-lain (Wikipedia).
 
-	> We're not designing pages, we're designing systems of components. —Stephen Hay
 
-	Dalam konsep ADM, komponen dapat diumpakan sebagai atom. Kita menggabunkan atom-atom menjadi molekul, molekul menjadi organisme, organisme menjadi template, template menjadi halaman-halaman.
-	React sangat cocok diaplikasikan ke dalam konsep pengembangan ADM karena dalam React kita memulai dari mengembangkan komponen-komponen yang kita gabungkan untuk membentuk sebuah halaman.
-	Keterangan lebih lanjut mengenai ADM dapat dibaca di [tautan ini](http://bradfrost.com/blog/post/atomic-web-design/).
+**Konsep _“Atomic Design Methodology”_**
+
+> We're not designing pages, we're designing systems of components. —Stephen Hay
+
+Dalam konsep ADM, komponen dapat diumpakan sebagai atom. Kita menggabunkan atom-atom menjadi molekul, molekul menjadi organisme, organisme menjadi template, template menjadi halaman-halaman.
+React sangat cocok diaplikasikan ke dalam konsep pengembangan ADM karena dalam React kita memulai dari mengembangkan komponen-komponen yang kita gabungkan untuk membentuk sebuah halaman.
+
+Keterangan lebih lanjut mengenai ADM dapat dibaca di [tautan ini](http://bradfrost.com/blog/post/atomic-web-design/).
 
 ## Pengenalan NPM
 
 _Package manager_ adalah software yang digunakan untuk menginstalasi dan mengelola paket-paket software. Hampir setiap bahasa pemrograman dan sistem operasi memiliki _package manager_-nya masing-masing. Beberapa contoh package manager yang terkenal misalnya brew, apt-get, composer, dan bower.
+
 NPM (Node Package Manager) adalah sebuah package manager yang dibuat menggunakan teknologi [Node](https://nodejs.org/en/). Untuk menggunakannya kita harus menginstal Node terlebih dahulu di sistem.
+
 __Catatan__: Selain untuk NPM, kita juga akan membutuhkan Node untuk membuat sebuah aplikasi _backend_ berbasis Node di latihan React _server-side_
 
 * Instalasi Node
+	
 	Silahkan langsung membuka laman Node untuk membaca cara instalasi Node di sistem operasi yang digunakan. Saya sendiri menggunakan brew untuk menginstal Node di MacOS.
 
 * package.json
+	
 	Berkas _package.json_ adalah berkas konfigurasi yang digunakan oleh Node. Dalam latihan ini saya akan banyak menggunakan berkas ini terutama untuk konfigurasi berkas-berkas yang harus diinstalasi menggunakan NPM.
+	
 	Cara penggunaannya mudah, kita tinggal membuka direktori yang berisi berkasi _package.json_ melalui terminal lalu memulai instalasi library yang dibutuhkan dengan perintah `npm isntall`.
 
 * Skrip NPM
 	Selain mencatat library yang digunakan, _package.json_ juga dapat digunakan untuk menuliskan skrip perintah yang dapat kita jalankan di sebuah lingkungan Node.
+	
 	Di banyak latihan, selain perintah `npm install` untuk menginstalasi library, kita juga akan menggunakan skrip `npm start` untuk menjalankan perintah-perintah seperti transpilasi menggunakan webpack atau menjalankan server Node.
+	
 	Di bagian TDD, kita juga dapat mengatur skrip `npm test` untuk menjalankan _test runner_ seperti Mocha untuk menjalankan tes pada berkas-berkas JavaScript aplikasi kita.
 
 ## Pengenalan ES6
 
 [Pengenalan ES6.](https://github.com/arisetyo/belajar-react/tree/master/3_es6)
 
-* Penggunaan Babel dan Webpack
-	* Instalasi webpack global
-	* Mengenal Babel & Webpack
-	* Mengenal webpack.config.js
-	* hot module reload & webpack-dev-server
-	* Membuat komponen React menggunakan ES6
-	* Menerjemahkan komponen dari latihan sebelumnya ke ES6
+## Penggunaan Babel dan Webpack
+
+* Instalasi webpack global
+* Mengenal Babel & Webpack
+* Mengenal webpack.config.js
+* hot module reload & webpack-dev-server
+* Membuat komponen React menggunakan ES6
+* Menerjemahkan komponen dari latihan sebelumnya ke ES6
 
 ## Pengenalan React-Router
 * Instalasi

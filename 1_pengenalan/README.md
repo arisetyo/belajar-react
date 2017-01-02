@@ -45,23 +45,29 @@ Selain itu plugin-plugin yang disediakan Babel memungkinkan untuk menggunakan fi
 ## Penjelasan Materi Latihan
 
 * "Hello World"
-	Sebuah aplikasi kecil dengan satu komponen sederhana.
+	
+  Sebuah aplikasi kecil dengan satu komponen sederhana.
 
 * _counter_
+  
   Di sini kita berkenalan dengan _state_ & _lifecycle_ komponen React.
 
 * _timer_
+  
   Di sini kita berkenalan dengan interaktivitas pada komponen.
 
 * React _props_
+  
   Di aplikasi ini kita mencoba menggunakan beberapa komponen React yang berinteraksi satu sama lain melalui _props_ komponen React.
 
 * Olah data
+  
   Di sini kita kembali menggunakan lebih dari satu komponen React, serta menggunakan data tabular untuk me-render sebuah komponen React.
 
 ## _Lifecycle_ komponen React
 
 Setiap komponen React memiliki _metode-metode lifecycle_ yang dipanggil tergantung _lifecycle_-nya. Sebagai contoh, metode _render()_ menentukan struktur sebuah komponen di dalam aplikasi. Ini adalah _lifecycle_ yang paling penting karena tanpanya sebuah komponen tidak dirender dan tidak dapat me-_return_ apa-apa.
+
 Contoh lainnya adalah _componentDidMount()_ yang akan dipanggil saat aplikasi selesai di-render. Contoh-contoh lainnya dapat dilihat [di sini](https://facebook.github.io/react/docs/react-component.html).
 
 __Dalam membuat sebuah komponen kita tidak perlu menuliskan setiap metode, hanya yang kita butuhkan saja.__
