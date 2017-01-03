@@ -1,0 +1,19 @@
+.container {
+	border: 1px solid white;
+	padding: 30px;
+	background-color: pink;
+	margin-bottom: 20px;
+}
+
+.header {
+	color: white;
+}
+
+.emphasize {
+	font-style: italic;
+	color: yellowgreen;
+}
+
+.emphasize:hover {
+	color: white;
+}

@@ -1,0 +1,11 @@
+.container {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	margin-right: 5px;
+}

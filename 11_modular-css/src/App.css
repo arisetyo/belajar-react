@@ -1,0 +1,35 @@
+.container {
+	padding: 10px;
+}
+
+.header {
+	color: yellowgreen;
+}
+
+.wrapper {
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.wrapper.hidden {
+	opacity: 0;
+}
+
+:global(.redFont) {
+	color: darkred;
+}
+
+button {
+	border-radius: 6px;
+	border: 1px solid pink;
+	background-color: pink;
+}
+
+@media screen and (max-width: 425px) {
+	button {
+		font-weight: bold;
+		font-size: 24px;
+		display: block;
+		color: white;
+	}
+}
