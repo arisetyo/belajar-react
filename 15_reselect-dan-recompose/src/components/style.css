@@ -1,0 +1,44 @@
+.container {
+	margin: 5px;
+	padding: 5px;
+}
+
+.task {
+	padding: 4px;
+	margin: 2px;
+	background-color: powderblue;
+	cursor: pointer;
+}
+
+.task:hover {
+	background-color: #ddd;
+}
+
+.finished {
+	text-decoration: line-through;
+}
+
+.nav {
+	margin-left: 8px;
+}
+
+input {
+	outline: none;
+}
+
+h4 {
+	color: #999;
+}
+
+button {
+	background-color: steelblue;
+	color: white;
+	border: none;
+	margin: 2px;
+	outline: none;
+}
+
+button:hover {
+	background-color: skyblue;
+	cursor: pointer;
+}
