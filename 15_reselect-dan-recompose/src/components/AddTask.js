@@ -1,16 +1,20 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {compose, defaultProps, withState} from 'recompose'
+import {compose, defaultProps, withState, pure} from 'recompose'
 import {addTask} from '../store/actions'
 import {placeholderText, buttonText} from '../helper/constants'
 import styles from './style.css'
 
 /**
  * Kita menambahkan state dan default property menggunakan Recompose pada komponen AddTask.
+ * Ini menjaga agar kode tetap sederhana dengan menghindari penggunaan Class.
+ * Kita juga menggunakan pure untuk membuat komponen hanya di-render ulang bila menerima properties yang berbeda.
+ * Ini sama dengan menggunakan PureComponent.
  */
 const enhance = compose(
 	withState('content', 'setContent', ''),
-	defaultProps({placeholderText})
+	defaultProps({placeholderText}),
+	pure
 )
 
 const AddTask = enhance(({content, setContent, placeholderText, doAddTask}) => {
